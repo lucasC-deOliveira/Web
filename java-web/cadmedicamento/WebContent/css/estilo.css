@@ -1,0 +1,28 @@
+.navbar-default {
+    background: #2c9e42;
+}
+.navbar-brand{
+	    color: #fff !important;
+}
+.navbar  ul li a {
+	color: #fff !important;
+	background-color: #2c9e42;
+	
+}
+.dropdown-menu{
+	color: #fff !important;
+	background-color: #177129;
+}
+.navbar-default .navbar-nav  .open  a, 
+.navbar-default .navbar-nav  .open  a:focus,
+.dropdown-menu  li  a:hover {
+    background-color: #177129;
+    border-color: #177129;
+    color: #fff;
+}
+.navbar {
+	margin-bottom: 0;
+}
+.jumbotron{
+	background-color: #c3e3b5;
+}

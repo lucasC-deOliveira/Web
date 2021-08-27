@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="WEB-INF/template/template.xhtml">
+	<ui:define name="content">
+		<h:form method="post" styleClass="form-horizontal">
+			<div class="container">
+				<h:messages showSummary="true" showDetail="true" />
+				<div class="page-header">
+					<h1>
+						Medicamento <small>Consulta</small>
+					</h1>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Nome:" for="nome"
+						styleClass="control-label col-sm-2" />
+					<div class="col-sm-10">
+						<h:inputText value="#{medicamentoBean.medicamento.nome}"
+							maxlength="100" id="nome" styleClass="form-control" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="control-label col-sm-2"/>
+					<div class="col-sm-10">
+						<h:commandButton action="#{medicamentoBean.consultarPorNome()}" value="Consultar" styleClass="btn space" />
+					</div>
+				</div>
+				<h:panelGroup id="resultado">
+					<div class="panel panel-success">
+						<div class="panel-heading">Resultado da consulta</div>
+						<h:panelGroup>
+							<div class="table-responsive">
+								<h:dataTable value="#{medicamentoBean.listaMedicamento}"
+									var="medicamento" columnClasses=",text-center"
+									styleClass="table table-striped table-hover">
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Nome" />
+										</f:facet>
+										<h:outputText value="#{medicamento.nome}" />
+									</h:column>
+									<h:column headerClass="width100">
+										<f:facet name="header">Ação</f:facet>
+										<div class="btn-group btn-group-xs" role="group"
+											arial-label="...">
+											<h:commandLink action="#{medicamentoBean.editar(medicamento.id)}" immediate="true" 
+											title="Editar Medicamento" class="btn btn-default">
+												<em class="glyphicon glyphicon-pencil" />
+											</h:commandLink>
+											<h:commandLink action="#{medicamentoBean.excluir(medicamento.id)}" immediate="true" 
+											 title="Excluir medicamento" class="btn btn-default" onclick="return confirm('Deseja remover o medicamento ?')">
+												<em class="glyphicon glyphicon-trash" />
+											</h:commandLink>
+										</div>
+
+									</h:column>
+								</h:dataTable>
+							</div>
+
+						</h:panelGroup>
+					</div>
+
+				</h:panelGroup>
+
+			</div>
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

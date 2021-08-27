@@ -1,0 +1,42 @@
+/*#######seletor universal#######
+*{border: 1px solid red;}*/
+/*#######seletor de texto#######*/
+h1{
+	color: green;
+}
+/*#######seletor de classe#######*/
+.verde{
+	color: green;
+}
+/*#######seletor de classe especifico#######*/
+p.azul{ color: blue;
+
+}
+/*#######seletor de ID#######*/
+#cabeçalho{
+	border: 1px solid blue;
+}
+/*#######seletor filho#######*/
+/*seleciona um elemnto que é filho direto de outro*/
+li>a{
+	text-decoration: none;
+	color: green;
+
+}
+/*#######seletor de descendente#######*/
+/*seleciona qualquer elemento x esteja dentro de y*/
+p a {
+	font-weight: bold;
+	color: green;
+
+}
+/*#######seletor de irmao adjacente#######*/
+/*seleciona o elemento y que esta abaixo de x*/
+h1+p{
+	color: red;
+}
+/*#######seletor de irmao geral#######*/
+	/*seleciona o elemento y que esta no nivel de hierarquia de x*/
+h1~p{
+	color: pink;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Escopo de variaveis em JS</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// 3 escopos: global, função e o bloco
+
+		//escopo global
+
+		var serie = "Friends"
+
+		//escopo de bloco
+
+		if(1===1){
+			document.write(serie)
+			var serie2 = "Game of Thrones"
+		}
+		document.write("<br>")
+		document.write(serie2)
+		document.write("<br>")
+
+
+		//função
+
+		function x ()
+		{
+			document.write(serie)
+			document.write("<br>")
+			document.write(serie2)
+			document.write("<br>")
+			var serie3 = "the walking dead"
+		}
+		x()
+		document.write(serie3)
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

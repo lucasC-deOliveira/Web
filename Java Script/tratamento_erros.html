@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tratamento de erros</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+throw new Error('ops, criei uma exceção, desculpa ae')
+		//netflix
+		var video = Array()
+
+		video[1]=Array()
+		video[1]['nome']= "full metal alchemist"
+		video[1]['categoria'] = "anime"
+
+
+
+		function getVideo(video){
+			//logica
+			//http
+			try{
+			console.log(video[0]['nome'])}
+
+			catch(e){
+				console.log("erro tratado macho")
+
+			}
+
+			finally{
+				console.log("sempre passa por aqui")
+			}
+			console.log("não morreu")
+
+		}
+
+		getVideo(video)
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

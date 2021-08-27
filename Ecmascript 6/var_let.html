@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>var e let</title>
+	<meta charset="utf-8">
+	<script >
+		//3 escopos: normal, função e bloco
+
+// estao disponiveis para tudo
+
+//var: se declarada em escopo global ou de , pode ser acessada de qualquer lugar, se for declara na função fica disponivel apenas na função
+
+//let: preserva o escopo onde a variavel é criada
+
+var serie = "friends" 
+function x(){
+	console.log(serie)
+
+	var serie ="game of Thrones"
+	console.log("função:" +serie)
+
+	if(true){
+		console.log(serie)
+		console.log("bloco:" +serie)
+
+	}
+
+
+}
+if(true){
+		
+		console.log("bloco global:" +serie)
+		let serie2 = "the walking dead"
+		console.log("bloco global serie 2:" +serie2)
+
+	}
+console.log("global:"+ serie2)
+
+	x()
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funções</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		//###############################FUNÇÃO#######################################
+		//POSSUI O OBJETIVO DE ENCAPSULAR UM BLOCO DE CODIGOS COM UM OBJETIVO DEFINIDO
+
+		function calcularAreaTerreno(largura, comprimento){
+			var area = largura * comprimento
+
+			return area
+		}
+
+		var largura= prompt("digite a largura do terreno em metros: ")
+		var comprimento= prompt("digite o comprimento do terreno em metros: ")
+
+		var area = calcularAreaTerreno(largura, comprimento, 15, 30) // o java script desconsidera os parametros adicionais
+		//caso seja passado menos parametros que o esperado, o parametro emitido sera igual "undefined" e resultara em um "not a number" ex: var area = calcularAreaTerreno(largura) , comprimento sera === undefined
+
+
+		document.write("O terreno possui: "+area+" metros²")
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

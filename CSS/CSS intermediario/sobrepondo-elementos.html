@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sobrepondo elementos</title>
+
+	<meta charset="utf-8">
+
+	<style type="text/css">
+
+		.conteudo1{
+			border: 1px solid red;
+			background: orange;
+			width:200px;
+			height:200px;
+			position: absolute;
+			z-index: 1;
+
+		}
+		/*z-index: define qual conteudo vai sobrepor o outro. quanto maior o numero maior a prioridade, se for o mesmo segue-se a ordem do documento*/
+		.conteudo2{
+			border: 1px solid red;
+			background: green;
+			width:200px;
+			height:200px;
+			position: absolute;
+			top: 80px;
+			left:80px;
+			z-index: 0;
+
+		}
+		.conteudo3{
+			border: 1px solid red;
+			background: yellow;
+			width:200px;
+			height:200px;
+			position: absolute;
+			top: 160px;
+			left:160px;
+			z-index: 0;
+
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="conteudo1"> conteudo 1</div>
+	<div class="conteudo2"> conteudo 2</div>
+	<div class="conteudo3"> conteudo 3</div>
+</body>
+</html>

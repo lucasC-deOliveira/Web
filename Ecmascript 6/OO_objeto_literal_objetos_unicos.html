@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos Literais Objetos Unicos</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		//no caso da criação de um objeto literal, todas as variaveis que são atribuidas a ele serão referencia e apontarão para o mesmo objeto
+
+		let assinatura = {
+			idCliente: 1000,
+			descricao: 'acesso a internet',
+			status(){
+				console.log('ativo')
+			}
+		} 
+
+		console.log(assinatura.descricao)
+
+		//no exemplo a baixo serão duas variaveis apontando para um objeto e não dois objetos
+
+		let y  = assinatura
+
+		console.log(y.descricao)
+
+
+		y.descricao = 'internet + tv + telefone'
+		//as duas variaveis mstrarão a mesma descrição
+		console.log(assinatura.descricao)
+		console.log(y.descricao)
+
+		
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

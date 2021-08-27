@@ -1,0 +1,30 @@
+ ul#navegação { 
+margin: 0;
+padding: 0;
+list-style: none;
+width: 720px;
+background: #159cb0 url("imagens/fundo-horizontal.png") repeat-x;
+float: left;
+}
+ul#navegação li {
+	float: left;
+}
+ul#navegação a{
+	display: block;
+	padding: 0 2em;
+	line-height: 2em;
+	text-decoration: none;
+	color: white;
+	background: url("imagens/divisor.png") repeat-y left top;
+}
+.primeiro{
+	background: none;
+}
+ul#navegação a:hover{
+color: #085662;
+background: #44cade;
+}
+#home #navegação .home a, #sobre #navegação .sobre a,#serviços #navegação .serviços a,#noticias #navegação .noticias a,#contato #navegação .contato a{
+	color: #085662;
+background: #44cade;
+}

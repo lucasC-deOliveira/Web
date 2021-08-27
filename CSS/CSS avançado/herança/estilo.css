@@ -1,0 +1,36 @@
+/*#####herança e espeça e especificidade ####*/
+
+/*###########herança############*/
+
+/*body{
+	color é herdado
+	color: red;
+	borde e backgroud não são herdados 
+	border: 1px solid blue;
+	background: gray:;
+}*/
+/*###########especificidade############*/
+/*seletores iguais  ultimo é aplicado, exceto que tenha o !important
+#pagina p{
+	color: blue !important; 
+
+}
+
+#pagina p{
+	color: purple;
+}*/
+/*----------------------------------------------------------------------------------------------------*/
+/* caso um seletor seja mais especifico que o outro as regras que serão aplicadas é do mais especifico*/
+*{
+	color: red;
+}
+h2{
+	color: purple;
+}
+/*o ID é  mais especifico que a classe*/
+h2.verde{
+	color:green;
+}
+#amarelo{
+	color: yellow;
+}

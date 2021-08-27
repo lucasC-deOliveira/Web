@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Herança</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	//codigo sem herança
+	/*class Cachorro{
+		constructor(){
+			this.cor = "braco"
+			this.tamanho= 30
+			this.orelhas = "grandes e caidas"
+		}
+		correr(){
+			console.log('correu')
+		}
+
+		dormir(){
+			console.log('dormiu')
+		}
+
+		rosnar(){
+			console.log('Rosnou')
+
+		}
+	}
+
+
+	class Passaro{
+		constructor(){
+			this.cor = 'branco e preto'
+			this.tamanho = 10
+			this.bico = 'curto'
+		}
+
+		voar(){
+			console.log('voou')
+		}
+
+		dormir(){
+			console.log('dormiu')
+		}
+	}
+	let cachorro = new Cachorro()
+	let passaro = new Passaro()
+
+	console.log(cachorro)
+	console.log(passaro)*/
+
+	//da pra ver metodos comuns entre as duar classe
+	// herança: voce cria uma classe base para que caso necessario suas classes herdem os metodos e atributos da classe pai
+
+
+	// codigo com herança
+
+	class Animal{
+		constructor(){
+			this.cor = ''
+			this.tamanho = undefined
+		}
+
+		dormir(){
+			console.log('dormiu')
+		}
+	}
+
+
+	class Cachorro extends Animal{
+		constructor(){
+			super()
+			this.orelhas = "grandes e caidas"
+		}
+		correr(){
+			console.log('correu')
+		}
+
+		
+
+		rosnar(){
+			console.log('Rosnou')
+
+		}
+	}
+
+
+	class Passaro extends Animal {
+		constructor(){
+			super()
+			this.bico = 'curto'
+		}
+
+		voar(){
+			console.log('voou')
+		}
+
+	}
+
+	class Papagaio extends Passaro{
+		constructor(){
+			super()
+			this.sabeFalar = true
+
+		}
+		falar(){
+			console.log('falou')
+		}
+
+
+	}
+
+
+
+
+
+
+
+
+
+	let cachorro = new Cachorro()
+	let passaro = new Passaro()
+	console.log(cachorro.dormir())
+	console.log(passaro.dormir())
+	let papagaio = new Papagaio()
+	console.log(passaro.voar())
+</script>
+</head>
+<body>
+
+</body>
+</html>

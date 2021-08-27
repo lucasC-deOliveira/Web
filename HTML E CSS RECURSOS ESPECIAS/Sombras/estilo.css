@@ -1,0 +1,13 @@
+#caixa{
+	width: 300px;
+	height: 300px;
+	padding: 8px;
+	margin: 20px;
+	background: #009670;
+	box-shadow:  /*horizontal*/20px 20px/*vertical*/ 5px /*borrado*/ 10px/*espalhamento*/ rgba(0,0,0,0.5);
+
+}
+#caixa h1{
+	color: white;
+	text-shadow: /*horizontal*/20px 20px/*vertical*/ 5px /*borrado*/ rgba(0,0,0,0.5);
+} 

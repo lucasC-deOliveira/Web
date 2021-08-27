@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rest Spread</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		//é um operador que pode ser usado para juntar e espalhar, depende do contexto
+
+		//contexto Spread: espalhar
+
+		//string
+		let tituloArtigo = 'Como utilizar o operador Rest/Spread'
+
+		console.log(tituloArtigo)
+
+		//spread
+
+		console.log(...tituloArtigo)
+
+		//colocar o spread em um array
+
+		console.log([...tituloArtigo])
+
+		// da pra espalhar arrays dentro de arrays
+		let listaCurso1 = ['node JS' , 'ES6']
+		let listaCurso2 = ['Android,IOS', 'GNU Linux']
+		let listaCursoCompleto = [ 'Web Completo', 'Android Completo', ...listaCurso1, ...listaCurso2]
+
+
+		console.log(listaCursoCompleto)
+
+		//da pra usar em objetos
+		let pessoa = {nome: 'jão', idade: '27'}
+		let clone  = {...pessoa, endereco: 'Rua abc'}
+
+		console.log(clone)
+
+
+		//contexto Rest: Juntar
+
+		//vai juntar os parametros em um arrays
+		function soma(...param){
+			let resultado = 0
+			console.log(param)
+
+			param.forEach(v => resultado += v)
+
+			return resultado	
+		}
+
+
+		console.log(soma(3,8,5,7, -188, 20 , 500, - 200))
+
+		//outra aplicação
+
+		function multiplicacao(m, ...p){
+			console.log(`m: ${m}`)
+			console.log(`p: ${p}`)
+			let resultado= 0
+
+			p.forEach(v => resultado += m*v )
+
+			return resultado
+
+		}
+
+		// o primeiro parametro vai ser atribuido a m, os outros vão virar um array e serão atribuidos a p
+
+		console.log(multiplicacao(5, 7, 12, 3, 49))
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="WEB-INF/template/template.xhtml">
+	<ui:define name="content">
+		<h:form method="post" id="idMedicamento" styleClass="form-horizontal">
+			<div class="container">
+				<h:messages showSummary="true" showDetail="true" />
+				<div class="page-header">
+					<h1>
+						Medicamento <small>Cadastro</small>
+					</h1>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Nome:" for="nome"
+						styleClass="control-label col-sm-2" />
+					<div class="col-sm-10">
+						<h:inputText value="#{medicamentoBean.medicamento.nome}" required="true" maxlength="100" id="nome"
+							label="Nome" styleClass="form-control" />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Tipo:" for="tipo"
+						styleClass="control-label col-sm-2" />
+					<div class="col-sm-10">
+						<h:selectOneMenu value="#{medicamentoBean.medicamento.tipo}" class="form-control" >
+							<f:selectItem itemValue="" itemLabel="Selecione" />
+							<f:selectItem itemValue="1" itemLabel="Homeopático" />
+							<f:selectItem itemValue="2" itemLabel="Similar" />
+							<f:selectItem itemValue="3" itemLabel="Genérico" />
+							<f:selectItem itemValue="4" itemLabel="Referência" />
+							<f:selectItem itemValue="5" itemLabel="Manipulado" />
+						</h:selectOneMenu>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<h:outputLabel value="Valor Custo:" for="custo"
+						styleClass="control-label col-sm-2" />
+					<div class="col-sm-10">
+						<h:inputText value="#{medicamentoBean.medicamento.valorCusto}" required="true" maxlength="10" id="valorCusto" 
+						label="Valor custo" styleClass="form-control" />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Valor Venda:" for="venda"
+						styleClass="control-label col-sm-2" />
+					<div class="col-sm-10">
+						<h:inputText value="#{medicamentoBean.medicamento.valorVenda}" required="true" maxlength="10" id="valorVenda"
+						label="Valor venda" styleClass="form-control"  />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel styleClass="control-label col-sm-2" />
+					<div class="col-sm-10">
+						<h:commandButton action="#{medicamentoBean.salvar()}" value="Salvar" styleClass="btn space" />
+					</div>
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

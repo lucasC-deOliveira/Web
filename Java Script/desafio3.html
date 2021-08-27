@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMC</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var nome = prompt("Informe seu nome:")
+		console.log(nome)
+
+		var altura = prompt("Informe a sua altura em centimetros:")
+
+		altura = parseFloat(altura)
+
+		console.log(altura)
+
+
+		var peso = prompt("Informe seu Peso em kilos:")
+
+		peso = parseFloat(peso)
+
+		console.log(peso)
+
+
+		altura /= 100
+		console.log(altura)
+
+		M = peso / (altura * altura)
+
+		console.log(M)
+		var classificacao = null
+
+		if( M < 16 ){
+			classificacao= "Peso baixo, Situação: MUITO GRAVE!"
+
+		}
+
+		if( M >= 16 && M < 17 ){
+			classificacao="Peso baixo, Situação: GRAVE!"
+
+		}
+
+		if( M >= 18.5 && M < 17 ){
+			classificacao="Peso baixo"
+
+		}
+
+		if( M >= 18.5 && M < 25 ){
+			classificacao="Peso normal"
+
+		}
+
+		if( M >= 25 && M < 30 ){
+			classificacao="Sobre peso"
+
+		}
+
+		if( M >= 30 && M < 35 ){
+			classificacao="Obesidade Grau I!"
+
+		}
+
+		if( M >= 35 && M < 40 ){
+				classificacao ="Obesidade Grau II!"
+
+		}
+
+		if( M >= 40){
+				classificacao = "Obesidade Grau III!"
+
+		}
+
+
+document.write(nome+": possui índice de massa corporal igual a: " + M + " sendo classificado como: " + classificacao)
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

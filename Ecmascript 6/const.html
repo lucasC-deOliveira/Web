@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CONST</title>
+	<meta charset="utf-8">
+	<script >
+		//constantes: devem ser declaradas e caixa alta, no momento de declaração devem receber valor e não podem ter ser valor modificado no  decorrer do codigo, sua variação de escopo trabalha conforme a do let
+	const SERIES = "friends"
+	
+	function x(){
+		const SERIES ="the walking dead"
+		console.log("dentro da função: "+SERIES)
+	}
+	x()
+	console.log(SERIES)
+</script>
+</head>
+<body>
+
+</body>
+</html>

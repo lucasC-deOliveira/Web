@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html" lang="pt-BR"
+>
+<h:head>
+    <title>CadMedicamento Online</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF8"/>
+    <link href="#{facesContext.externalContext.requestContextPath}/css/bootstrap.min.css?#{startup.time}"
+          rel="stylesheet"/>
+    <link href="#{facesContext.externalContext.requestContextPath}/css/bootstrap-datetimepicker.min.css?#{startup.time}"
+          rel="stylesheet"/>
+    <link href="#{facesContext.externalContext.requestContextPath}/css/trumbowyg.min.css?#{startup.time}"
+          rel="stylesheet"/>
+    <link href="#{facesContext.externalContext.requestContextPath}/css/select2.min.css" rel="stylesheet"/>
+    <link href="#{facesContext.externalContext.requestContextPath}/css/estilo.css?#{startup.time}" rel="stylesheet"/>
+    <meta name="apple-mobile-web-app-title" content="Questões-Faciplac"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="#{facesContext.externalContext.requestContextPath}/imagens/favicon.ico?#{startup.time}"/>
+    <link rel="icon" type="image/x-icon"
+          href="#{facesContext.externalContext.requestContextPath}/imagens/favicon.ico?#{startup.time}"/>
+    <link rel="apple-touch-icon"
+          href="#{facesContext.externalContext.requestContextPath}/imagens/favicon.png?#{startup.time}"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage"
+          content="#{facesContext.externalContext.requestContextPath}/imagens/favicon.png?#{startup.time}"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/jquery.min.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/trumbowyg.min.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/langs/pt_br.min.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/trumbowyg.base64.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/trumbowyg.pasteimage.min.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/trumbowyg.table.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/moment-with-locales.min.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/bootstrap.min.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/bootstrap-datetimepicker.min.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/select2.min.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/i18n/pt-BR.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/bootbox.min.js?#{startup.time}"/>
+    <script type="text/javascript"
+            src="#{facesContext.externalContext.requestContextPath}/js/geral.js?#{startup.time}"/>
+    <ui:insert name="header"/>
+</h:head>
+<h:body>
+    <h:form id="menu">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+               
+                <h:panelGroup>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar1"
+                                aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"/>
+                            <span class="icon-bar"/>
+                            <span class="icon-bar"/>
+                        </button>
+                        <h:commandLink action="/visao/index?faces-redirect=true" styleClass="navbar-brand"
+                                       style="padding-top: 6px !important">
+                            <img src="#{facesContext.externalContext.requestContextPath}/imagens/logob.png" width="40"
+                                 height="40" alt="Logo Faciplac"/>
+                        </h:commandLink>
+                        <h:commandLink action="/visao/index?faces-redirect=true" styleClass="navbar-brand">
+                            Adega Online
+                        </h:commandLink>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar1">
+                        <ul class="nav navbar-nav">
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    Cadastro <em class="caret"/>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <h:panelGroup>
+                                        <li>
+                                            <h:commandLink action="cadastroMedicamento.xhtml" value="Medicamento"/>
+                                        </li>
+                                        
+                                        <li role="separator" class="divider"/>
+                                    </h:panelGroup>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav">
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    Consulta <em class="caret"/>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <h:panelGroup>
+                                        <li>
+                                            <h:commandLink action="#{medicamentoBean.init()}" value="Medicamento"/>
+                                        </li>
+                                        
+                                        <li role="separator" class="divider"/>
+                                    </h:panelGroup>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </h:panelGroup>
+            </div>
+        </nav>
+    </h:form>
+    <ui:insert name="content"/>
+    <ui:insert name="footer"/>
+    <div class="clearfix">
+        <br/>
+        <p style="text-align: center; font-size: 10pt">Copyright © 2019 - Todos os direitos reservados.</p>
+        <br/>
+    </div>
+</h:body>
+</html>

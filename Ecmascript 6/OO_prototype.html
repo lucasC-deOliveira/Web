@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos Prototype</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// prototype: é um modelo, um padrão, primeiro tipo de algo, ao criar um objeto este automaticamente é um herdeiro de object, metodos e atributos de object são herdados em todos os objetos
+
+		//aviao
+		//atributos: cor, modelo. metodo: levantarVoo
+
+		// objeto literal
+
+		let a1 = {
+			cor: 'branco',
+			modelo: 'Airbus a380',
+			levantarVoo: function (){
+				console.log('lenvantando voo')
+			}
+		}
+
+		//função construtora
+
+		let AviaoF = function(){
+			this.cor = 'azul'
+			this.modelo = 'Boeing 787'
+			this.levantarVoo = function (){
+				console.log('lenvantando voo')
+			}
+		}
+
+		a2 = new AviaoF()
+
+
+		//classe
+
+		class AviaoC{
+			constructor(){
+				this.cor = 'vermelho'
+				this.modelo = "Embraer E-jets"
+			}
+
+			levantarVoo(){
+				console.log('levantando voo')
+			}
+		}
+
+		a3 = new AviaoC()
+
+
+		console.log(a1)
+		console.log(a2)
+		console.log(a3)
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

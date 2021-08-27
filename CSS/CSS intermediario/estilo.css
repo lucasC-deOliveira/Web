@@ -1,0 +1,42 @@
+
+/* modelo de caixa
+
+padding soma com o tamanho da caixa
+.conteudo{
+
+	border: 1px solid red;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+    padding: 10px 15px 20px 30px;
+	padding: 20px;
+	padding: 20px 5px;
+
+	as margens de elementos diferentes se sobrepõem, a margem maior sempre sera a aplicada
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin: 20px;
+
+
+	width: 150px;
+}
+
+.conteudo2{
+	border: 1px solid red;
+	width: 150px;
+	margin: 50px;
+
+}*/
+
+/*noticia*/
+#noticia{
+	background: #f9f9f9;
+	padding: 10px;
+	border: 1px solid gray;
+}
+h2{
+	margin: 0px;
+}

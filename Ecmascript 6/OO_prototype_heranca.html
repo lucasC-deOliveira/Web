@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos Prototype Herança e Polimorfismo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		//Object.prototype
+		//por padrao todo objeto aponta para object
+		Object.prototype.attr50 ='z' // cuidado atributo ou metodo global, para todos os objetos!
+		//no codigo abaixo mudamos para onde o objeto aponta'
+		
+		let Animal = {attr1: 'a'}
+		let Vertebrado ={__proto__: Animal, attr2: 'b',}
+		let Ave= {__proto__: Vertebrado, attr3: 'c', attr2: 'd'}
+
+		console.log(Ave.attr2, Ave.attr1, Ave.attr50)
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow Function</title>
+	<meta charset="utf-8">
+	<script >
+		//função normal
+		/*let quadrado = function(x = 5){
+			return x *x
+		} 
+
+
+		document.write(quadrado(3))*/
+
+
+		//arrow function
+		//é apenas uma maneira diferente de declarar uma função, não muda o resultado
+
+		//let quadrado= (x) => {return x*x}
+
+		//caso haja apena um parametro
+		/*let quadrado = x => {
+			return x*x
+		}*/
+
+		//caso não haja parametro
+		/*let quadrado = () => {
+			return 1 * 1
+		}*/
+
+		//caso a função faça apenas uma instrução
+		//let quadrado = x => x * x // return implicito
+
+		//OUTRO EXEMPLO COM UMA FUNÇÃO MAIS COMPLEXA
+		//FUNÇÃO NORMAL
+
+		/*
+
+		let parImpar= function(numero){
+			if (numero % 2 === 0 ){
+				return "par"
+
+			}
+			else{
+				return "impar"
+			}
+
+		}
+		document.write(parImpar(8))
+		*/
+
+		 /*let parImpar = numero => {
+			if (numero % 2 === 0 ){
+				return "par"
+
+			}
+			else{
+				return "impar"
+			}
+		}*/
+
+
+
+
+		//DA PRA COMBAR COM O IF TERNARIO
+
+
+
+		let parImpar = numero => numero % 2 === 0 ? "par" : "impar" //retorno implicito
+		document.write(parImpar(4))
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

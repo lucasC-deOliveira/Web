@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script Arrays</title>
+	<meta charset="utf-8">
+
+	<script>
+	var listaFrutas = ["uva" , "maça", "morango", "bluebarry"]
+	console.log(listaFrutas)
+
+	//ordenação alfabetica
+	listaFrutas.sort()
+	console.log(listaFrutas)
+
+
+	var listaNumeros = [12 , 40, 3, 7, 10, 15]
+	console.log(listaNumeros)
+
+	listaNumeros.sort()
+	console.log(listaNumeros)
+
+
+// ordenar numericamente
+	function ordenaNumeros(a, b){
+		return a - b
+		//valor < 0 = "a" sera ordenado antes de "b"
+		//valor > 0 = "b" sera odenado antes de "a"
+		//valor == ordem mantida
+		//mesmo se os valores forem string porem representarem numero o JS faz casting automaticamente
+
+	}
+
+
+	listaNumeros.sort(ordenaNumeros)
+	console.log(listaNumeros)
+
+	</script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

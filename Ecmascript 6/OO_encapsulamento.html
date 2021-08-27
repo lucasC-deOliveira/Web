@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encapsulamento</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// encapsulamento: é uma camada de segurança que proibe a aplicação de alterar os atributos do objeto, de forma que so o objeto pode permitir a alteração apartir de metodos 
+		//java script: ainda não suporta os niveis de variaveis no ecmascript 6/ ex: protected, public, private, a solução é uma convenção de usar "_" antes de variaveis privadas, dizendo assim para outros programadores não acessarem a variavel de forma direta
+
+		class Tv{
+			constructor(){
+				this._relacaoCanais = new Array(1, 2, 8, 6, 7)
+				this._canalAtivo = 6
+				this._volume = 5
+			}
+
+			//getter e setters
+
+			get canalAtivo(){
+				return this._canalAtivo
+			}
+
+			set canalAtivo(canal){
+				let x =this._relacaoCanais.indexOf(canal)
+				if(x != -1){
+				this._canalAtivo = canal}
+				else{
+					console.log("canal invalido")
+				}
+			}
+
+
+		}
+
+		let tv = new Tv()
+		//caso haja valor o interpretador so java script vai procurar pelo metodo set, caso não haja o metodo get
+		tv.canalAtivo = 3
+		console.log(tv.canalAtivo)
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

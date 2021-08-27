@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos Literais Melhorias</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	
+//dados recuperados do formulario
+//ex: document.getElementById('nome').value
+	let nome ='jorge'
+	let idade = 62
+	let sexo ='masculino'
+	let profissao ="protetico"
+
+
+	let objeto = {
+		/*nome do par*/ nome: /*variavel */nome,
+		idade: idade ,
+		sexo: sexo, 
+		profissao: profissao,
+		exibirResumo: function(){
+			document.write(`${this.nome}, ${this.idade} anos, ${this.sexo}, ${this.profissao}`)
+		}
+	}
+	objeto.exibirResumo()
+
+	//melhorias
+	let objeto2 = {
+		//caso nome par === nome valor, podemos omitir nome par
+		//nome par === nome da variavel, valor === valor da variavel
+		  nome,
+		idade ,
+		sexo, 
+		profissao,
+		//metodos podem ser declarados como se estivessem dentro de uma class
+		exibirResumo(){
+			document.write(`<br>${this.nome}, ${this.idade} anos, ${this.sexo}, ${this.profissao}`)
+		}
+	}
+	objeto2.exibirResumo()
+	//resultado iguais
+</script>
+</head>
+<body>
+
+</body>
+</html>

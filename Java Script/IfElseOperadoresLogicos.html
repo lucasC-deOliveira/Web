@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>operadores logicos</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// OPERADORES LOGICOS
+		// E (&&) - Verdadeiro se todas as expressões forem verdadeiras
+		// OU (||) - Verdadeiro se uma das expressões forem verdadeiras 
+		// Negação (!) - Inverte o resultado da expressão de comparação
+
+		var media = 7
+		var nota = prompt("digite a sua nota:")
+		var faltasMaximas = 15
+		var faltas= prompt("digite a quantidade de faltas:") 
+
+
+/*
+		if (nota >= media && faltas <= faltasMaximas){
+			document.write("aprovado")
+
+		}
+		else{
+			document.write("reprovado")
+		}
+		*/
+
+		/*OPERADOR TERNARIO
+		resultado = <condição> ? <verdadeiro> : <falso>*/
+		var resultado = nota >= media && faltas <= faltasMaximas ? "Aprovado" : "reprovado"
+		document.write(resultado)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

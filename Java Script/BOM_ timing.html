@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script Bom</title>
+	<meta charset="utf-8">
+
+	<script>
+	// O bom é uma API para acessar os recursos do navegador
+	
+	//executa uma ação uma unica vez apos um intervalo de tempo
+	//setTimeout(<ação> <tempo em milissegundos>)
+	//setTimeout(function () {document.write('teste')}, 2000)
+	//para sair clear timeout(<variavel>)
+
+
+	//executa uma ação apos um intervalo de tempo repetidas vezes
+	//setInterval(<ação> <tempo em milissegundos>)
+	//setInterval(function () {document.write('teste')}, 2000)
+	var i = 5
+	var x = setInterval(function () {document.write(i)
+		i--
+		if(i ==0){
+			//window.location.reload()
+			clearInterval(x)
+
+		}
+	}, 1000)
+
+
+
+	</script>
+
+	<style type="text/css">
+
+	</style>
+
+
+</head>
+
+<body>
+	
+</body>
+
+</html>

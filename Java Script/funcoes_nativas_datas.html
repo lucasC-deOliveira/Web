@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>funções nativas Datas</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		/*// é um objeto que precisa ser instanciado
+		// mantem o estado da data atual do sistema operacional do usuario 
+		var data = new Date()
+
+		//30/06/2021
+
+		//recuperar dia atual
+		document.write(data.getDate())
+		document.write("<br>")
+
+
+		//recuperar mes atual, considera mes de 0 a 11
+		document.write(data.getMonth() + 1)
+		document.write("<br>")
+
+		// recuperar ano atual
+		document.write(data.getFullYear())
+		document.write("<br>")
+
+		//montar data
+
+		document.write(data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear())
+		document.write("<br>")
+
+		// adicionar ou remover dias da data
+		document.write(data.toString())
+		data.setDate(data.getDate() + 35)
+		document.write("<hr>")
+		document.write(data.toString())
+		document.write("<hr>")
+
+		// adicionar ou remover meses da data
+		data1 = new Date()
+		document.write(data1.toString())
+		data1.setMonth(data1.getMonth() + 1 + 10)
+		document.write("<hr>")
+		document.write(data1.toString())
+		document.write("<hr>")
+
+		// adicionar ou remover meses da data
+		data3 = new Date()
+		document.write(data3.toString())
+		data3.setFullYear(data3.getFullYear() + 10)
+		document.write("<hr>")
+		document.write(data3.toString())
+		document.write("<hr>")
+*/
+
+//15/01/2017
+var data1 = new Date(2017, 0, 15)
+document.write(data1.toString())
+document.write("<hr>")
+
+//23/02/2017
+var data2 = new Date(2017, 1, 23)
+document.write(data2.toString())
+document.write("<hr>")
+
+// Convertar datas para algo que possamos calcular
+document.write(data1.getTime())
+document.write("<hr>")
+document.write(data2.getTime())
+document.write("<hr>")
+document.write("<br> <br>")
+// getTime: se refencia apartir dos milissegundos de 1 de janeiro de 1970 
+
+// encontrar a quantidade de milissegundos entre data 1 e data 2
+
+//Mathabs retorna o modular do numero 
+
+document.write(Math.abs(data1.getTime() - data2.getTime()))
+document.write("<hr>")
+document.write("<br> <br>")
+
+// converter a data para dias 
+// 1 dia tem 24 hrs, cada hora 60 mim, cada min 60 segundos e cada segundo 1000 milissegundos
+//quantos milissegundo existe em um dia ? 86400000 
+document.write("um dia tem: " + (1*24*60*60*1000))
+document.write("<hr>")
+document.write("<br> <br>")
+var milissegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+var milissegundos_por_dia = (1*24*60*60*1000)
+
+document.write("a diferença entre as datas 15/01/2017 e 23/02/2017 são de: " +Math.ceil(milissegundos_entre_datas / milissegundos_por_dia)+ " dias")
+
+//dividir a diferença entre as datas por milissegundos de um dia
+
+
+
+
+
+		
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

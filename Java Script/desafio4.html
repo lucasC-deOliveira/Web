@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>funções desafio</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var num1 = prompt("digite um numero")
+		num1=parseFloat(num1)
+
+		console.log(num1)
+		var num2 = prompt("digite outro numero")
+		num2=parseFloat(num2)
+		console.log(num2)
+		var operacao=prompt("soma ou subtração?")
+		console.log(operacao)
+
+
+		function calcular(operacao, numero, numero2 ){
+			var resultado = null
+			if (operacao == true){
+				return resultado = num1 + num2
+				
+			}
+			if(operacao == false) {
+				return resultado = num1 - num2
+				
+			}
+
+			return resultado
+
+
+
+
+		}
+	var lOperacao = function(operacao){
+
+		if(operacao == "soma"){
+			return true
+			 //document.write("é soma")
+
+		}
+
+		if( operacao == "subtração"){
+			return false
+			 //document.write("é subtração")
+		}
+
+		return null
+		//document.write("é nada")
+
+
+
+			
+
+		}
+
+		console.log(lOperacao(operacao))
+
+		function validarPrograma(operacao){
+			if(operacao.trim() == "soma" || operacao.trim() == "subtração"){
+				document.write("a " + operacao + " do numero: " + num1 +" + o numero: " + num2+" é: <b> " + calcular(lOperacao(operacao), num1, num2 ) + "</b>")
+			}
+
+			else{ 
+				document.write( "operação informada é invalida")
+
+			}
+
+		}
+		validarPrograma(operacao)
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+		
+
+
+	</script>
+	<style type="text/css">
+	 b{color:red;}
+	</style>
+</head>
+<body>
+
+</body>
+</html>

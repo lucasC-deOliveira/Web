@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Assignment</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// é um operador de desestruturação, tira valores de dentro de uma estrutura, podendo ser um array ou objeto
+
+
+		//codigo sem o operador
+
+		let frutas = ['abacate', 'abacaxi', 'uva', 'morango']
+
+		/*let a = frutas[0]
+
+		console.log(a)*/
+
+		//cod com  o operador
+
+		//destructuring: usa o [], n confunda com array!!!
+
+		/*let [c, b ] = frutas
+
+		console.log(c, b)*/
+
+		//pular indice: e so dar uma instrução vazia
+
+		/*let [d, ,e ] = frutas
+
+		console.log(d, e)*/
+
+		//DESESTRUTURANDO COM VALOR DEFAULT
+		//caso valor exista, valor default é desconsiderado
+
+		let[a, b='bluebarry' , c, d, e = 'maça'] = frutas
+		console.log(a, b, c, d, e )
+
+		//array multidimencionais
+		let coisas = [['abacate', 'abacaxi', 'uva', 'morango'],['jose', 'maria']]
+		let [,[,n2]] = coisas
+		console.log(n2)
+
+
+
+
+
+
+		
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

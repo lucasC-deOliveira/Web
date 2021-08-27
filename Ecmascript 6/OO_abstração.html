@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Abstração</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// entidade: é algo do mundo real que dever ser criado dentro do codigo
+		// identidade: referenciar a entidade de forma unica no codigo 
+		// caracteristicas: são os atributos da entidade
+		// ações: são os metodos das entidades 
+		//abstração: capacidade de identificar as caracteristicas e ações da entidade uteis para o onjetivo do codigo
+		// class: é o modelo da entidade, não é a entidade nem o objeto ex: a receita de um bolo e o bolo são diferentes
+		//objeto: é uma entidade criada dentro do codigo, é uma instancia da class
+
+		//modelo objeto
+		class ContaBancaria{
+			//atributos
+			//agencia
+			//numeroConta 
+			//saldo 
+			//limite
+
+			//é o metodo automatico que determina os valores que serão utilizados para construção do objeto
+			constructor(){
+				this.agencia = 1007
+				this.numeroConta= 51827
+				this.saldo = 50
+				this.limte = 5000
+
+			}
+
+			//metodos/ ações
+			//no java escript embora metodos sejam funções, não é necessario declarar com a palavra function
+			depositar(valor){
+				this.saldo += valor
+
+
+
+
+			}
+
+			sacar(valorSaque){
+				this.saldo -= valorSaque
+
+
+			}
+
+			consultarSaldo(){
+				return this.saldo
+
+			}
+
+		}
+
+		//instanciando a classe
+		//depois da intancia cria-se um objeto
+
+
+		let x = new ContaBancaria()
+
+		//identidade de x e y são diferentes, logo são objetos diferentes
+
+		let y = new ContaBancaria()
+
+		//para consuntar metodos e atributos use o "."
+		console.log(x.consultarSaldo())
+		x.depositar(50)
+		console.log(x.consultarSaldo())
+		x.sacar(30)
+		console.log(x.consultarSaldo())
+		//os valores de y estao inalterados
+		console.log(y.consultarSaldo())
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

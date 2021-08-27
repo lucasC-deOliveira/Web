@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script Eventos</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function acao1(){
+			alert("evento disparado")
+		}
+		
+	</script>
+
+	<style type="text/css">
+		.caixa{
+			margin: 0px 0px 30px 10px;
+			background: #ccc;
+			display: flex;
+			align-items: baseline;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+
+
+		}
+	</style>
+</head>
+<body>
+	<div class="caixa">
+		<h1>onkeydown</h1>
+		<h4>ao pressionar a tecla</h4>
+
+
+		<input onkeydown="acao1()" type="text" name="" >
+	</div>
+
+	<div class="caixa">
+		<h1>onkeyup</h1>
+		<h4>ao soltar a tecla</h4>
+
+
+		<input onkeyup="acao1()" type="text" name="" >
+	</div>
+
+	<div class="caixa">
+		<h1>onkeypess</h1>
+		<h4>quando a tecla e precionada</h4>
+		<h6><b>Observação:</b> o evento so e disparado para teclas que emitam caracteres</h6>
+
+
+		<input onkeypress="acao1()" type="text" name="" >
+	</div>
+
+
+
+</body>
+</html>

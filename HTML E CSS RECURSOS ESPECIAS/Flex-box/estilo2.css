@@ -1,0 +1,39 @@
+#conteudo{
+	background: #dcdcdc;
+	height: 300px;
+	display: flex;
+
+}
+.item{
+	background: white;
+	border: 1px solid gray;
+	/*width: 300px;*/
+	height: 100px;
+	margin: 10px;
+	/*define a proporção de espáço ocupado por um item*/
+	flex-grow: 0;
+
+	/*define a capacidade de redução de tamanho do item*/
+	flex-shrink: 1; 
+
+	/*indica o tamanho inicial do flex item antes da distribuição do espaço restante.*/
+	flex-basis: 200px;
+
+}
+/*
+.ordem1{
+	order: 1;
+}
+.ordem2{
+	order: 2;
+}
+.ordem3{
+	order: 3;
+}
+.ordem4{
+	order: 4;
+}*/
+.item1{
+/*flex-grow:1; */
+flex-shrink: 6;
+}

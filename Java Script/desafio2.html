@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Identificação de faixa etária </title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var idade = prompt("qual é a sua idade?")
+
+		if( idade >= 0 && idade <= 15){
+			document.write("Criança")
+
+		}
+		if( idade >= 15 && idade <= 30){
+			document.write("Jovem")
+
+		}
+
+		if( idade >= 30 && idade <= 60){
+			document.write("Adulto")
+
+		}
+		if( idade >= 60 && idade <= 120){
+			document.write("Idoso")
+
+		}
+
+		if(idade > 120 || idade < 0){
+			document.write("idade invalida")
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

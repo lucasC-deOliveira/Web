@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Polimosfismo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	//polimofismo:  é quando trabalhamos com herança, as classes filhas herdam da classe pai, o polimorfismo ocorre quando precisamos que a classe filha se comporte diferente da classe pai por meio da sobre escrita de metodos
+
+	class Animal{
+		constructor(cor, tamanho){
+			this.cor = cor
+			this.tamanho = tamanho
+		}
+
+		dormir(){
+			console.log('dormiu')
+		}
+	}
+
+
+
+	class Passaro extends Animal {
+		constructor(bico, cor , tamanho){
+			super(cor, tamanho)
+			this.bico = bico
+		}
+
+		voar(){
+			console.log('voou')
+		}
+
+	}
+
+	class Papagaio extends Passaro{
+		constructor(sabeFalar, cor, tamanho){
+			super("medio", cor, tamanho)
+			//this: variavel do contexto da classe
+			this.sabeFalar = sabeFalar
+
+
+		}
+		falar(){
+			console.log('falou')
+		}
+
+
+	}
+	//polimorfismo no avestruz
+
+	class Avestruz extends Passaro{
+		constructor(){
+			super("grande", 'branco e preto', 250)
+
+		}
+		enterraCabeça(){
+			console.log('enterrou a cabeça')
+		}
+
+		//apenas sobre escreve o metodo
+		voar(){
+			console.log('passaro que não voa rs')
+		}
+	}
+
+
+let papagaio = new Papagaio(true, 'azul', 30)
+console.log(papagaio)
+papagaio.voar()
+
+let avestruz = new Avestruz()
+console.log(avestruz)
+avestruz.voar()
+
+
+
+
+
+	
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

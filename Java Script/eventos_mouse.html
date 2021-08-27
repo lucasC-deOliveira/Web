@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script Eventos</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function acao(){
+			alert("evento disparado")
+		}
+		function acao1(){
+			alert("regiao foi clicada")
+
+		}
+
+		function acao2(){
+				alert("mouse deixou a regiao")
+
+		}
+	</script>
+</head>
+<body>
+	<h1>onclick</h1>
+	<div onclick="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>
+	<br>
+	<br>
+
+	<h1>onclick 2 clicks</h1>
+	<div ondblclick="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>
+	<br>
+	<br>
+
+	<h1>onclick com ativado com click no mouse liberado</h1>
+	<div onmouseup="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>
+	<br>
+	<br>
+
+	<h1>onmouseover</h1>
+	<div onmouseover="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>
+	<br>
+	<br>
+
+	<h1>onmouseout</h1>
+	<div onmouseout="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>
+	<br>
+	<br>
+
+	<h1>mais de um evento pode ser aplicado</h1>
+	<div onmouseout="acao2()" onclick="acao1()" style="background: #ccc; height: 150px; width: 150px;"></div>
+	<br>
+	<br>
+
+
+</body>
+</html>

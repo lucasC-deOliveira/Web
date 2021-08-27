@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<h:body> 
+<h:form method="post" id="idCadastroMedicamento">
+	<h:outputLabel value="Nome Medicmento:" />
+	<br/><br/>
+	<h:inputText id="nomeMedicamento" label="Nome Medicamento" maxlength="100" value="#{medicamentoBean.medicamento.nome}" />
+	<br/><br/>
+	<h:outputLabel value="Tipo Medicamento" />
+	<br/><br/>
+	<h:selectOneMenu value="#{medicamentoBean.medicamento.tipo}">
+		<f:selectItem itemValue="" itemLabel="Selecione"  />
+		<f:selectItem itemValue="1" itemLabel="Homeopático"/>
+		<f:selectItem itemValue="2" itemLabel="Similar"/>
+		<f:selectItem itemValue="3" itemLabel="Genérico"/>
+		<f:selectItem itemValue="4" itemLabel="Referência"/>
+		<f:selectItem itemValue="5" itemLabel="Manipulado"/>
+	</h:selectOneMenu>
+	<br/><br/>
+	<h:outputLabel value="Valor custo:" />
+	<br/><br/>
+	<h:inputText id="valorCusto" label="Valor Custo" value="#{medicamentoBean.medicamento.valorCusto}" />
+	<br/><br/>
+	<h:outputLabel value="Valor Venda:" />
+	<br/><br/>
+	<h:inputText id="valorVenda" label="Valor Venda" value="#{medicamentoBean.medicamento.valorVenda}" />
+	<br/><br/>
+	<h:commandButton action="#{medicamentoBean.salvar()}" value="Salvar" />
+</h:form>
+</h:body> 
+</html>

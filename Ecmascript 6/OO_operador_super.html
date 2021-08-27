@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Operador Super</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	//super: fornece acesso ao construtor da classe pai
+
+	class Animal{
+		constructor(cor, tamanho){
+			this.cor = cor
+			this.tamanho = tamanho
+		}
+
+		dormir(){
+			console.log('dormiu')
+		}
+	}
+
+
+
+	class Passaro extends Animal {
+		constructor(bico, cor , tamanho){
+			super(cor, tamanho)
+			this.bico = bico
+		}
+
+		voar(){
+			console.log('voou')
+		}
+
+	}
+
+	class Papagaio extends Passaro{
+		constructor(sabeFalar, cor, tamanho, bico){
+			super(bico, cor, tamanho)
+			//this: variavel do contexto da classe
+			this.sabeFalar = sabeFalar
+
+
+		}
+		falar(){
+			console.log('falou')
+		}
+
+
+	}
+
+
+
+
+
+
+
+
+
+	
+
+	let papagaio = new Papagaio(true, "azul", 10, "grande")
+	console.log(papagaio)
+</script>
+</head>
+<body>
+
+</body>
+</html>

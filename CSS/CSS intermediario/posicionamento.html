@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>posicionamento (static, relative, absolute, fixed)</title>
+
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		body{
+			background: #007fc7;
+		}
+		#container{
+			background: #fff;
+			width: 800px;
+			margin: 10px auto;
+			padding: 10px;
+			position: relative;
+		}
+		p{
+			width: 300px;
+
+		}
+		/*estatico e posicionamento padrao*/
+		h1{
+			position: static;
+
+		}
+
+
+		/*relative: a posição relativa a partir de onde o elemento deveria estar*/
+		.relative{
+			border: 1px solid red;
+			position: relative;
+			/*top,right,left,bottom*/
+			bottom: 150px;
+			left:350px;
+		}
+		/*absolute: a posição de elemento em relação ao container desde que esteja na posição relativa, ou corpo da pagina*/
+		.absolute{
+			border: 1px solid red;
+			position: absolute;
+			background: #f2f2f2;
+			top: 80px;
+			right: 10px;
+		}
+		/*fixed: fixa o conteudo na tela, mesmo ao rolar o scroll*/
+		.fixed{
+			border: 1px solid red;
+			position: fixed;
+			background: #f2f2f2;
+			top: 0px;
+			left: 0px;
+			}
+
+
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>posicionamentos</h1>
+		<p> p1 inline 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet consequat varius. Vestibulum ut nunc tortor. Vestibulum sed scelerisque justo. Integer a tortor eget est eleifend cursus. Vestibulum auctor nunc quis arcu rhoncus tempus quis a leo. Nulla varius vitae tortor sed luctus. Morbi nec nunc felis</p>
+		<p class="fixed">p2 inline 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet consequat varius. Vestibulum ut nunc tortor. Vestibulum sed scelerisque justo. Integer a tortor eget est eleifend cursus. Vestibulum auctor nunc quis arcu rhoncus tempus quis a leo. Nulla varius vitae tortor sed luctus. Morbi nec nunc felis</p>
+		<p> p3 inline 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet consequat varius. Vestibulum ut nunc tortor. Vestibulum sed scelerisque justo. Integer a tortor eget est eleifend cursus. Vestibulum auctor nunc quis arcu rhoncus tempus quis a leo. Nulla varius vitae tortor sed luctus. Morbi nec nunc felis</p>
+		<p> p3 inline 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet consequat varius. Vestibulum ut nunc tortor. Vestibulum sed scelerisque justo. Integer a tortor eget est eleifend cursus. Vestibulum auctor nunc quis arcu rhoncus tempus quis a leo. Nulla varius vitae tortor sed luctus. Morbi nec nunc felis</p>
+		<p> p3 inline 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet consequat varius. Vestibulum ut nunc tortor. Vestibulum sed scelerisque justo. Integer a tortor eget est eleifend cursus. Vestibulum auctor nunc quis arcu rhoncus tempus quis a leo. Nulla varius vitae tortor sed luctus. Morbi nec nunc felis</p>
+		<p> p3 inline 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet consequat varius. Vestibulum ut nunc tortor. Vestibulum sed scelerisque justo. Integer a tortor eget est eleifend cursus. Vestibulum auctor nunc quis arcu rhoncus tempus quis a leo. Nulla varius vitae tortor sed luctus. Morbi nec nunc felis</p>
+
+
+	</div>
+</body>
+</html>

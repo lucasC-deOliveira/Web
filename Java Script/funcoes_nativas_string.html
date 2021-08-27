@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>funções nativas string</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// Uma string é um array de caracteres portanto cada caracter ocupa uma posição a começar pela posição zero
+
+
+		//propriedade length: retorna quantidade de caracteres de uma string
+
+		document.write("lucas carvalho".length)
+		document.write("<br>")
+
+		// espaço conta
+
+		//charAt(): retorna o caracter em determinada posição
+		document.write("lucas carvalho".charAt(1))
+		document.write("<br>")
+
+		//indexOf: retorna a posição da primeira ocorrencia de determinado caracter. letras maisculas e minusculas são consideradas diferentes. caso o caracter não exista a função retorna -1.
+
+		var nome = " lucas carvalho "
+		document.write(nome.indexOf("o"))
+		document.write("<br>")
+
+		//replace(): permite substituir caracters em uma string
+		document.write(nome.replace("carvalho", "oliveira"))
+		document.write("<br>")
+
+		//substr(): extrair parte de uma string com base em uma posição inicial ate uma posição final
+
+		document.write(nome.substr(6, 14))
+		document.write("<br>")
+
+		//toLowerCase()/ toUpperCase() : converte todos os caracteres para minusculo ou maisculo
+		document.write(nome.toUpperCase())
+		document.write("<br>")
+
+		//trim(): remove espaços em branco das extremidades das strings
+		document.write("-"+nome.trim()+"-")
+		document.write(nome)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

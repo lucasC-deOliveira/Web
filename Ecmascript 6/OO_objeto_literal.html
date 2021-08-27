@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos Literais</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	//objeto literal / estaticos: é o objeto que e descrito dentro do codigo, sem modelo/class
+	//recomenda-se o uso quando não é necessario criar varios objetos iguais, ou seja é um objeto unico e não precisa de uma classe
+	//ex: formulario : objeto => servidor: recupera e monta um objeto literal => objeto litera => JSON => HTTP =>armazena no servidor
+
+	class Produto {
+		constructor( descrição, preço){
+			this.descrição = descrição
+			this.preço= preço
+		}
+
+		verDescricao(){
+			 document.write(`${this.descrição} por apenas ${this.preço} R$`)
+
+		}
+	}
+
+	let produto = new Produto('celular', 15000)
+	produto.verDescricao()
+
+	//objeto literal
+
+
+	let produtoLiteral = {
+		descrição: 'notebook',
+		preço: 1600,
+		verDescricao: function(){ document.write(`<br>${this.descrição} por apenas ${this.preço} R$`)}
+
+	}
+
+	produtoLiteral.verDescricao()
+</script>
+</head>
+<body>
+
+</body>
+</html>

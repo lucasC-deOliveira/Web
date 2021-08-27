@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>elementos flutuantes</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.conteudo{
+			background: blue;
+			border: 1px solid gray;
+			width: 200px;
+			height:200px;
+			float: right;
+			margin: 10px;
+
+
+		}
+		/*
+		o float ignora o fluxo padrão dos elementos, podendo sobrepor.
+		quando todos os elementos estão flutuando, eles concorrem pelo espaço e não se sobrepõem, apenas elementos sem float são sobrepostos.
+
+		.conteudo1{
+			background: red;
+			border: 1px solid gray;
+			width: 150px;
+			height:150px;
+			float: left;
+
+
+			}*/
+			.conteudo-zero{
+				background: red;
+				border: 1px solid gray;
+				width: 200px;
+				height:200px;
+
+
+
+			}
+		/*o clear deve ser aplicado na direção que o float esta, ou quando quando existem nos dois sentido deve ser usado both.
+		o clear serve para ordena o fluxo de elementos que estão flutuando e elementos que não estão.
+
+		*/
+		.clear{
+			/*both, none, right, left*/
+			clear: both;
+		}
+
+		#principal{
+			border: 1px solid red;
+			background: green;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="principal">
+		<div class="conteudo">conteudo1</div>
+		<div class="conteudo">conteudo2</div>
+		<div class="conteudo">conteudo3</div>
+		<div class="clear"></div>
+		<!--<div class="conteudo-zero">conteudo4</div>-->
+	</div>
+
+
+
+
+
+
+
+
+<!--<p class="clear">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean cursus nisl augue, a congue leo interdum non. Pellentesque eget velit et urna porta cursus. Morbi enim lorem, pretium non nulla eu, consectetur mollis tortor. Morbi vitae dui eu est tincidunt iaculis non sed tortor. Vestibulum ultrices, eros at suscipit pharetra, turpis urna dignissim ipsum, sit amet suscipit odio erat ut felis. Quisque ut dolor lacus. Etiam eget est arcu. Mauris elementum ligula in augue fringilla commodo. Sed euismod risus ac lobortis accumsan. Nam sed accumsan mi. Donec ut urna est. Aliquam a pellentesque dui. Duis aliquet euismod eros non suscipit. Morbi venenatis arcu massa, quis dictum mauris consequat ut. Quisque et ornare purus. Duis convallis porttitor ipsum, et sagittis elit viverra quis.
+
+Vestibulum sagittis tincidunt urna ut scelerisque. Integer ac sollicitudin odio. Fusce porttitor fringilla sem sed pharetra. Aliquam erat volutpat. Nulla id elementum nibh, sit amet fermentum purus. Nunc lobortis dignissim felis consequat interdum. Mauris gravida varius tellus, ut auctor mi semper ut. Sed bibendum nulla aliquet tincidunt tempus. Vestibulum ipsum augue, aliquet id odio at, bibendum tristique erat. Cras blandit pulvinar quam, id eleifend magna porta a. Phasellus aliquam mi ac luctus aliquam. Donec massa leo, porta a malesuada ut, posuere a nulla. Suspendisse quis lectus in purus pretium imperdiet. Donec id odio in odio bibendum rutrum. Mauris nec maximus turpis.
+
+Duis eu massa vitae enim congue ornare. Donec rutrum leo vel sem tincidunt eleifend. Suspendisse potenti. Donec eu urna in metus pulvinar bibendum laoreet vitae lacus. Nullam aliquam quis nunc in lobortis. Cras urna massa, convallis nec ullamcorper quis, maximus ut metus. Pellentesque ornare pretium pulvinar. Phasellus porttitor ex lectus, at rutrum nisl blandit sit amet.
+
+Cras suscipit leo bibendum bibendum pretium. Aliquam erat volutpat. Pellentesque varius sem eu eleifend scelerisque. Suspendisse et cursus mi. Phasellus faucibus at lorem sed ultricies. Integer sed suscipit elit. Morbi molestie blandit odio quis lacinia. Phasellus pellentesque ex nec malesuada elementum. Integer at aliquam velit. Cras facilisis vitae quam in semper. Nullam luctus turpis id ipsum bibendum, suscipit consequat nulla tempor.
+</p>-->
+
+
+</body>
+</html>

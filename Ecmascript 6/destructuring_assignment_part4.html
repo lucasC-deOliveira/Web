@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Assignment</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		/*//array
+		let arr =[10,20,30,40]
+
+		//extrair valores em uma unica variavel
+		//utilizar operador Rest com destructuring
+
+		let [ a, ...resto] = arr
+		console.log(a,resto)*/
+
+		let obj={
+			a:10,
+			b:20,
+			c:30,
+			d:40
+		}
+
+		let{a, ...resto} = obj
+		console.log(a,resto)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

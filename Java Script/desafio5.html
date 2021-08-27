@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script Desafio</title>
+	<meta charset="utf-8">
+
+	<script>
+		
+
+		function ModificaCor(){
+			document.getElementById("campo").className = 'estilo1'
+			
+
+			
+			
+
+		}
+
+		function RetornaCor(){
+			document.getElementById("campo").className = ''
+			document.getElementById("campo").style.background = "#ff0000"
+			
+
+			if(document.getElementById("campo").value.length > 2){
+				document.getElementById("campo").style.background = "#00ff00"
+
+			}
+				
+			
+		}
+		
+
+
+
+		</script>
+
+		<style type="text/css">
+
+
+			.estilo1{
+				background-color: #DAA520;
+				color: black;
+			}
+
+		</style>
+
+
+	</head>
+
+	<body>
+		<input type="text" id='campo'  onfocus="ModificaCor()" onblur="RetornaCor()">
+
+
+
+	</body>
+
+	</html>

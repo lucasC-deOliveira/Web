@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script Bom</title>
+	<meta charset="utf-8">
+
+	<script>
+	// O bom é uma API para acessar os recursos do navegador
+	var janela
+
+	function abrirPopUp(){
+		janela = window.open('http://www.google.com', 'nova_janela', 'width = 200, height = 100')
+	}
+	function fechaPopUp(){
+		janela.close()}
+
+	</script>
+
+	<style type="text/css">
+
+	</style>
+
+
+</head>
+
+<body>
+	<button onclick="abrirPopUp()">Abrir janela</button>
+	<button onclick="fechaPopUp()">Fechar janela</button>
+	<button onclick="window.print()">imprimir pagina</button>
+
+
+</body>
+
+</html>

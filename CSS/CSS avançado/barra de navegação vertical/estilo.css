@@ -1,0 +1,44 @@
+/*ul{
+
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+li{
+	
+	padding: 10px 20px;
+	background: url(imagens/seta.png) no-repeat left center;
+
+}*/
+
+ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+ ul a{
+ 	width: 200px;
+ 	height: 40px;
+ 	display: block;
+ 	/*border: 1px solid red;*/
+ 	background: #f7b600 url(imagens/menu.png )  no-repeat left bottom;
+ 	color: #000;
+ 	text-decoration: none;
+ 	text-indent: 40px;
+ 	line-height: 40px;
+ }
+ a:hover, .selecionado a{
+ 	background-position: right bottom;
+ 	background-color: #f99200;
+ 	color: #fff;
+ }
+ #home #navegação .home a,#sobre #navegação .sobre a, #serviços #navegação .seviços a, #noticias #navegação .noticias a, #contato  #navegação .contato a {
+ 	background-position: right bottom;
+ 	background-color: #f99200;
+ 	color: #fff;
+ }
+
+  
+
+  

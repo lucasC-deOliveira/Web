@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Abstração</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// um software de marcenaria
+		//cadeira e sofa
+
+	/*	//!paradigma procedural 
+
+		//cadeira
+		let qtd_pernas = 4
+		let giratoria = false
+		let cor = "azul"
+
+		//identidade = array de cadeiras
+		let cadeiras = []
+
+		//cadeira 1
+		cadeiras[0] = []
+		cadeiras[0]['qtd_pernas'] = 4
+		cadeiras[0]['giratoria'] = false
+		cadeiras[0]['cor'] = "azul"
+
+		//cadeira 2 
+		cadeiras[1] = []
+		cadeiras[1]['qtd_pernas'] = 1
+		cadeiras[1]['giratoria'] = true
+		cadeiras[1]['cor'] = "rosa"
+
+
+		function girarCadeira(indice){
+			if(cadeiras[indice]['giratoria'] === true){
+				console.log("cadeira girou")
+			}
+
+			else{
+				console.log("cadeira não é giratoria")
+			}
+		}
+
+		girarCadeira(1)
+
+		console.log(cadeiras)
+
+		function adicionarCadeira(qtd_pernas, giratoria, cor){
+			let cadeira = []
+			cadeira['qtd_pernas'] = qtd_pernas
+			cadeira['giratoria'] = giratoria
+			cadeira['cor']  = cor
+
+
+			cadeiras.push(cadeira)
+		}
+
+		adicionarCadeira(3, false, "verde")
+
+		console.log(cadeiras) */
+
+
+		//!paradigma Orientado a objetos
+
+		class Cadeira{
+			constructor(qtd_pernas, giratoria, cor){
+				this.qtd_pernas= qtd_pernas
+				this.giratoria= giratoria
+				this.cor= cor
+
+			}
+
+
+			girarCadeira(){
+				if(this.giratoria === true){
+					console.log('girou')
+
+
+				} else{
+					console.log('não girou')
+				}
+			}
+		}
+
+		let cadeira = new Cadeira(4, false, "azul")
+		let cadeira2  = new Cadeira(7, true, "preta")
+		cadeira.girarCadeira()
+		console.log(cadeira)
+		console.log(cadeira2)
+		cadeira2.girarCadeira()
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

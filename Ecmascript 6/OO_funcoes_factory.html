@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos Funções Factory</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	// é um desing pattern
+	// é uma fabrica de criação de objetos, automatiza o processo de criação em tempo de execução		
+
+	let Bicicleta1 = { 
+		cor: 'branca',
+		marcha: 'unica',
+		aro: 12,
+		pedalar() {console.log('pedalando')}}
+
+		console.log(Bicicleta1)
+		Bicicleta1.pedalar()
+
+
+
+
+
+		let Bicicleta2 = { 
+			cor: 'rosa',
+			marcha: '12',
+			aro: 27,
+			pedalar() {console.log('pedalando')}}
+
+			console.log(Bicicleta2)
+			Bicicleta2	.pedalar()
+
+
+
+		//automatizando
+		let BicicletaFactory = function(cor, marcha, aro) {
+			return{
+				cor: cor,
+				marcha: marcha,
+				aro: aro,
+				pedalar() {console.log('pedalando')
+			}
+
+		}
+	}
+
+		let Bicicleta3 = BicicletaFactory('rosa', '16', 12 )
+	    console.log(Bicicleta3) 
+	    let Bicicleta4 = BicicletaFactory('verde', 'unica', 30 )
+	     console.log(Bicicleta4) 
+	     console.log(Bicicleta3) 
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

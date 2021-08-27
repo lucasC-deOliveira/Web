@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Assignment</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		//destructuring aplicado ao contexto de objetos
+
+
+		// composição tem um
+		//objeto dentro de objeto
+
+		let produtos = {
+			descricao: 'Notebook',
+			preco: 1800,
+			detalhes:  {
+				fabricante: 'abc',
+				modelo: 'xyz'
+			}
+		}
+
+
+		//destructuring
+		//em objetos utiliza-se '{}' em vez de '[]'
+		//array => '[]'
+		//objetos => '{}'
+
+		//let{ descricao, preco} = produtos
+
+		//atribuindo a variaveis
+		/*let{ descricao: d, preco: p} = produtos
+
+
+		console.log(d, p)*/
+
+		//tentando usar valores que n exitem no objeto
+		// retornara undefined, porem da pra setar valor defalt
+
+		let{ descricao: d, preco:p, desconto:e =5} =produtos
+		console.log(d, p, e)
+
+		//extrair atributos de objetos dentro de objetos
+		let { detalhes: {fabricante:z, modelo:y = 'não informado'}}= produtos
+		console.log(z,y)
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Assignment</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		//array
+		//sem destructuring
+		/*let arr= [10,20,30,40]
+
+		function teste(a,b){
+			console.log(a, b)
+
+		}
+
+
+		teste(arr[0], arr[1])*/
+
+		//com destructuring
+/*
+		let arr= [10,20,30,40]
+
+		function teste([a,b]){
+			console.log(a, b)
+
+		}
+
+
+		teste(arr)*/
+
+		/*
+
+		// com objetos
+		//sem destructuring
+
+		let obj = {
+			a:10,
+			b:20,
+			c:30,
+			d:40
+		}
+
+		function teste(a,b){
+			console.log(a,b)
+
+		}
+		teste(obj.a, obj.b)
+		*/
+
+
+        // com objetos
+		//destructuring
+
+		let obj = {
+			a:10,
+			b:20,
+			c:30,
+			d:40
+		}
+
+		function teste({a,b}){
+			console.log(a,b)
+
+		}
+		teste(obj)
+	</script>
+</head>
+<body>
+
+</body>
+</html>
